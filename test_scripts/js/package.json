@@ -1,0 +1,15 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "example.mjs",
+  "scripts": {
+    "test": "./example.mjs"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-ssh": "^13.2.0",
+    "zx": "^8.0.2"
+  }
+}
