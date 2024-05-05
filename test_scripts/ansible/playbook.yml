@@ -1,0 +1,20 @@
+---
+- name: Wykonaj komendy na serwerze za pomocą SSH
+  hosts: localhost
+  tasks:
+    - name: Wykonaj komende sudo ls -lrt /etc/test
+      ansible.builtin.shell:
+        cmd: ls -lrt /etc/test
+      register: ls_result
+
+    - debug:
+        var: ls_result.stdout
+
+    - name: Wykonaj komende sudo touch /etc/test
+      become: true
+      ansible.builtin.shell:
+        cmd: touch /etc/test
+      register: touch_result
+
+    - debug:
+        var: touch_result.stdout
